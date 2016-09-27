@@ -4,13 +4,17 @@ var express = require('express');
 var parser = require('body-parser');
 var app = express();
 var reload = require('reload');
-var dataFile = require('./data/request.json');
-var requestData = require('./data/request.json');
+var dataFile = require('./app/data/request.json');
+var requestData = require('./app/data/request.json');
 
 var app = express();
 
 app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));
+
+app.use('/',function(req,res){
+	res.send('<h1>Hello World</h1>')
+});
 
 app.post('/', function (req, res) {
     if (Object.keys(req.body).length) {
@@ -45,5 +49,5 @@ app.post('/', function (req, res) {
 });
 
 app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+    console.log('Example app listening on port 3000');
 });
