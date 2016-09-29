@@ -1,16 +1,21 @@
 {
   "name": "challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Filter Challenge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "reload": "^1.0.1"
+    "reload": "^1.0.1",
+    "request": "^2.75.0"
   }
 }
